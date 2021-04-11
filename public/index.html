@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>Sayed</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+  <link href="css/templatemo-style.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+  <link href="css/all.min.css" rel="stylesheet" />
+  <link href="css/templatemo-style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div class="container">
+    <div id="root"></div>
+  </div>
+
+  <script type="text/babel" src="js/jquery.min.js"></script>
+  <script type="text/babel" src="js/parallax.min.js"></script>
+  <script type="text/babel">
+
+    $(document).ready(function () {
+      // Handle click on paging links
+      $(".tm-paging-link").click(function (e) {
+        e.preventDefault();
+
+        var page = $(this).text().toLowerCase();
+        $(".tm-gallery-page").addClass("hidden");
+        $("#tm-gallery-page-" + page).removeClass("hidden");
+        $(".tm-paging-link").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+</body>
+
+</html>
